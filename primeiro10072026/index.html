@@ -6,42 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio: A Ordem no Caos</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <script src="https://kit.fontawesome.com/3f21966000.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-    <div class="ui-title">Cadastro de Usuário</div>
+    <h3 class="ui-title centro">Cadastro de Usuário</h3>
 
-    <div class="canvas" id="canvas">
-        <div class=" ui-avatar"><i class="fa-solid fa-circle-user"></i></div>
+    <form class="canvas centro" id="canvas">
 
-        <!-- Textos -->
+        <img src="assets/img/mis botitas.jpg" class="ui-avatar">
 
-        <div class="item-solto ui-subtitle">Preencha os dados de acesso do sistema</div>
 
-        <!-- Inputs bagunçados (posições inline para simular o caos) -->
-        <div class=" ui-input-group">
-            <div class="ui-label">Nome Completo</div>
-            <div class="ui-input"></div> <!-- Erro proposital de tamanho -->
-        </div>
+        <p class="ui-subtitle">Preencha os dados de acesso do sistema</p>
 
-        <div class=" ui-input-group">
-            <div class="ui-label">E-mail Corporativo</div>
-            <div class="ui-input"></div> <!-- Erro proposital de altura -->
-        </div>
+        <label for="nome" class="ui-label canto">Nome Completo</label>
+        <input id="nome" class="ui-input canto">
 
-        <div class=" ui-input-group">
-            <div class="ui-label">Senha de Acesso</div>
-            <div class="ui-input"></div> <!-- Erro proposital de borda -->
-        </div>
+        <label for="email" class="ui-label canto">E-mail Corporativo</label>
+        <input id="email" class="ui-input canto">
+
+        <label for="senha" class="ui-label canto">Senha de Acesso</label>
+        <input id="senha" class="ui-input canto">
+
 
         <!-- Botões e Imagem -->
-        <div class=" ui-btn-primary">SALVAR USUÁRIO</div>
-        <div class=" ui-btn-secondary">Cancelar Operação</div>
+        <button class="ui-btn-primary botao">SALVAR USUÁRIO</button>
+        <button class="ui-btn-secondary botao">Cancelar Operação</button>
 
-    </div>
+    </form>
 </body>
 
 </html>

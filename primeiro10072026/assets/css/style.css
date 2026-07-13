@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #5B8266;
+}
+
+.centro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.canto{
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: baseline;
+    align-self: flex-start !important;
+}
+
+.botao{
+    height: 40px;
+    width: 15rem;
+    border-radius: 50px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.canvas{
+    padding: 20px;
+    margin: auto;
+    max-width: 450px;
+    height: 600px;
+    background-image: url("../img/download.jpg");
+    background-repeat: no-repeat;
+    object-fit: cover;
+    border: none;
+    border-radius: 20px;
+    
+}
+
+.ui-title{
+    color: #212922;
+    font-size: 30px;
+    text-shadow: 1px 2px 5px #212922be;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: auto;
+    max-width: 800px;
+    
+}
+
+.ui-subtitle{
+    margin: 15px;
+    font-size: 20px;
+    color: #212922;
+}
+
+
+.ui-label{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 20px;
+    color: #5B8266;
+}
+
+.ui-input{
+    color: #5B8266;
+    margin-top: 5px;
+    margin-left: 15px;
+    height: 35px;
+    width: 23rem;
+    padding: 15px;
+    background-color: #aef6c791;
+    border: 1px solid #DCEED1;
+    border-radius: 50px;
+    font-size: 20px;
+}
+
+.ui-btn-primary{
+    margin-top: 20px;
+    background-color: #294936;
+    border: none;
+    color: #AEF6C7;
+}
+
+.ui-btn-secondary{
+    margin-top: 20px;
+    color: #DCEED1;
+    background-color: #29493652;
+    border: 1px solid #ff0000;
+}
+
+.ui-avatar{
+    object-fit: cover;
+    width: 155px;
+    height: 155px;
+    border: 2px solid #DCEED1;
+    border-radius: 50%;
+    box-shadow: 5px 5px 5px #3533338a;
+}
+
+
+/* Responsitividades */
+
+.ui-input:hover{
+    outline: 2px solid #C8D5B9;
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+}
+.ui-input:focus{
+    outline: 2px solid #C8D5B9;
+    transform: scale(1.1);
+}
+
+.ui-btn-primary:hover{
+    background-color: #81be9d;
+    border: 2px dotted #a7e7c4;
+    color: #294936;
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+}
+
+.ui-btn-secondary:hover{
+    background-color: #ff0000;
+    border: none;
+    color: #C8D5B9;
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+}
