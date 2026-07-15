@@ -1,0 +1,88 @@
+:root {
+    --rosa-claro: #ffd8d8;
+    --rosa-chiclete: #ffb2c1;
+    --rosa-escuro: #9a5071;
+    --marrom: #8a432e;
+    --amarelo1: #f8d28b;
+    --amarelo2: #fef0a5;
+    --amarelo3: #f5ebb4;
+    --marrom-claro: #916051;
+    --marrom-escuro: #683526;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--marrom-escuro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main {
+    background-color: var(--rosa-escuro);
+    width: 500px;
+    height: 650px;
+    margin: 20px;
+    border: none;
+    border-radius: 30px;
+}
+
+.centro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.foto{
+    object-fit: cover;
+    width: 400px;
+    height: 400px;
+    margin-top: 30px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 5px var(--marrom-escuro);
+}
+
+.barra-progreco {
+    appearance: none;
+    width: 80%;
+    height: 4px;
+    margin-top: 30px;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.3);
+    outline: none;outline: none;
+    background-image: linear-gradient(var(--rosa-claro), var(--rosa-chiclete));
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.temporizador {
+    display: flex;
+    font-size: 11px;
+    font-weight: 500;
+    opacity: 0.6;
+    margin-top: 5px;
+}
+
+
+.btn {
+    background-color: #f5ebb400;
+    border: none;
+    margin: 30px 0px;
+    color: var(--rosa-claro);
+    font-size: 24px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    opacity: 0.8;
+}
+
+.btn:hover {
+    color: var(--amarelo3);
+}

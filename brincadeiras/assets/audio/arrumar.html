@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Player de Música</title>
+  <!-- Importando ícones externos (FontAwesome) para os botões -->
+  <link rel="stylesheet" href="https://cloudflare.com">
+  
+  <style>
+    /* Estilização Geral do Fundo */
+    body {
+      background-color: #7d4453; /* Cor de fundo vinho/rosada idêntica à imagem */
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    /* Container do Player */
+    .player-container {
+      width: 320px;
+      padding: 20px;
+      color: #fff;
+    }
+
+    /* Barra de Progresso e Tempos */
+    .progress-area {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 25px;
+    }
+
+    .time-info {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      font-weight: 500;
+      opacity: 0.6; /* Deixa o texto levemente transparente como no iOS */
+    }
+
+    /* Customização do controle deslizante (Input Range) */
+    .progress-bar {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      background: rgba(255, 255, 255, 0.3); /* Parte restante (rosa escuro/opaco) */
+      outline: none;
+      background-image: linear-gradient(#ff8ca3, #ff8ca3); /* Parte preenchida (rosa claro) */
+      background-size: 51% 100%; /* Ajuste dinâmico do progresso (51% baseado nos tempos da imagem) */
+      background-repeat: no-repeat;
+    }
+
+    /* Remove a bolinha do slider para ficar reto e liso como na imagem */
+    .progress-bar::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 0;
+      width: 0;
+    }
+    .progress-bar::-moz-range-thumb {
+      height: 0;
+      width: 0;
+      border: none;
+    }
+
+    /* Área de Controle dos Botões */
+    .controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 10px;
+    }
+
+    .btn {
+      color: #ffffff;
+      font-size: 24px;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+
+    .btn:hover {
+      opacity: 0.8;
+    }
+
+    /* Botão central de Play/Pause (maior) */
+    .btn-main {
+      font-size: 34px;
+    }
+
+    /* Botão de transmissão (AirPlay) lateral */
+    .btn-airplay {
+      font-size: 18px;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="player-container">
+    
+    <!-- Área de Progresso -->
+    <div class="progress-area">
+      <!-- Barra estruturada com input range nativo do HTML -->
+      <input type="range" class="progress-bar" min="0" max="177" value="90">
+      
+      <div class="time-info">
+        <span>1:30</span>
+        <span>-1:27</span>
+      </div>
+    </div>
+
+    <!-- Área dos Botões de Controle -->
+    <div class="controls">
+      <!-- Espaçador invisível à esquerda para equilibrar o ícone AirPlay da direita -->
+      <div style="width: 18px;"></div> 
+      
+      <button class="btn"><i class="fas fa-backward-fast"></i></button>
+      <button class="btn btn-main"><i class="fas fa-pause"></i></button>
+      <button class="btn"><i class="fas fa-forward-fast"></i></button>
+      
+      <!-- Ícone que simula o AirPlay/Transmissão da Apple -->
+      <button class="btn btn-airplay"><i class="fas fa-tower-broadcast"></i></button>
+    </div>
+
+  </div>
+
+</body>
+</html>
